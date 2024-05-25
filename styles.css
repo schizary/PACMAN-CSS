@@ -1,0 +1,57 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: rgb(97, 33, 97);
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.boca{
+    float: left;
+}
+
+.um{
+    border: 100px solid yellow;
+    border-radius: 50%;
+    position: relative;
+    top: 110px;
+    border-bottom: 100px solid transparent;
+    border-left: 100px solid transparent;
+    transform: rotate(-45deg);
+    animation: boca2 0.5s linear infinite;
+}
+
+
+.dois{
+    transform: rotate(45deg);
+    border: 100px solid yellow;
+    border-radius: 50%;
+    top: -90px;
+    position: relative;
+    border-top: 100px solid transparent;
+    border-left: 100px solid transparent;
+    animation: boca 0.5s linear infinite;
+}
+
+@keyframes boca {
+    0%,100%{
+        transform: rotate(45deg);
+    }
+    50%{
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes boca2 {
+    0%,100%{
+        transform: rotate(-45deg);
+    }
+    50%{
+        transform: rotate(-90deg);
+    }
+}
